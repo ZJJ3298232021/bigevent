@@ -4,7 +4,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
-import practice.zank.entity.Result;
 import practice.zank.entity.User;
 import practice.zank.util.JwtUtil;
 import practice.zank.util.ThreadLocalUtil;

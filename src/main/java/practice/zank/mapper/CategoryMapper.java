@@ -1,8 +1,8 @@
 package practice.zank.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import practice.zank.entity.Category;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
 * @author zank

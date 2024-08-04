@@ -1,8 +1,5 @@
 package practice.zank.util;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * ThreadLocal 工具类
  */

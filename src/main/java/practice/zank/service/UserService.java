@@ -1,8 +1,6 @@
 package practice.zank.service;
 
-import org.springframework.stereotype.Service;
 import practice.zank.entity.User;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
 * @author zank
