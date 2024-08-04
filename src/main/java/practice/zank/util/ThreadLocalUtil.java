@@ -1,4 +1,4 @@
-package com.itheima.bigeventadmin.utils;
+package practice.zank.util;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -11,3 +11,8 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     banner: off
+server:
+  port: 8080
+jwt:
+  key: zank
+  expiration: 360000000
