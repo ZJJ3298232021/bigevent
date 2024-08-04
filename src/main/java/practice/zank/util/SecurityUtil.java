@@ -9,6 +9,7 @@ public class SecurityUtil {
     public static String getPassWord(String password) {
         return ENCODER.encode(password);
     }
+
     public static boolean matches(String password, String encodePassword) {
         return ENCODER.matches(password, encodePassword);
     }

@@ -58,8 +58,8 @@ public class UserServiceImpl implements UserService {
     public void update(User user) {
         UpdateWrapper<User> updateWrapper = new UpdateWrapper<>();
         updateWrapper.eq("id", user.getId());
-        updateWrapper.set("nickname",user.getNickname());
-        updateWrapper.set("email",user.getEmail());
+        updateWrapper.set("nickname", user.getNickname());
+        updateWrapper.set("email", user.getEmail());
         updateWrapper.set("update_time", LocalDateTime.now());
         userMapper.update(user, updateWrapper);
     }

@@ -10,9 +10,10 @@ import practice.zank.interceptor.LoginInterceptor;
 public class WebConfig implements WebMvcConfigurer {
     @Autowired
     private LoginInterceptor loginInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //不拦截登录注册
-        registry.addInterceptor(loginInterceptor).excludePathPatterns("/user/login","/user/register");
+        registry.addInterceptor(loginInterceptor).excludePathPatterns("/user/login", "/user/register");
     }
 }
