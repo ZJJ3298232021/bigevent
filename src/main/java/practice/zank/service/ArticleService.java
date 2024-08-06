@@ -7,4 +7,9 @@ import practice.zank.entity.PageBean;
 public interface ArticleService {
     void add(Article article);
     PageBean<Article> list(Integer pageNum, Integer pageSize, String categoryId, String state);
+    void update(Article article);
+
+    Article getById(Integer id);
+
+    void delete(Integer id);
 }

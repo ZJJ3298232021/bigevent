@@ -1,6 +1,7 @@
 package practice.zank.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,12 @@ import java.time.LocalDateTime;
 public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleMapper articleMapper;
+
+    @Override
+    public void delete(Integer id) {
+        articleMapper.deleteById(id);
+    }
+
     @Override
     public void add(Article article) {
         User user = ThreadLocalUtil.get();
@@ -39,5 +46,20 @@ public class ArticleServiceImpl implements ArticleService {
         pageBean.setTotal(page.getTotal());
         pageBean.setItems(page.getRecords());
         return pageBean;
+    }
+
+    @Override
+    public void update(Article article) {
+        UpdateWrapper<Article> updateWrapper = new UpdateWrapper<>();
+        User user = ThreadLocalUtil.get();
+        updateWrapper.eq("create_user", user.getId());
+        updateWrapper.eq("id", article.getId());
+        updateWrapper.setSql("update_time=now()");
+        articleMapper.update(article, updateWrapper);
+    }
+
+    @Override
+    public Article getById(Integer id) {
+        return articleMapper.selectById(id);
     }
 }

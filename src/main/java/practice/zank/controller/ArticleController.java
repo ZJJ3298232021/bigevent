@@ -24,4 +24,18 @@ public class ArticleController {
                        @RequestParam(required = false) String state) {
         return Result.success(articleService.list(pageNum, pageSize, categoryId, state));
     }
+    @PutMapping
+    public Result update(@RequestBody @Validated(Article.Update.class) Article article) {
+        articleService.update(article);
+        return Result.success();
+    }
+    @GetMapping("/detail")
+    public Result detail(@RequestParam Integer id) {
+        return Result.success(articleService.getById(id));
+    }
+    @DeleteMapping
+    public Result delete(@RequestParam Integer id) {
+        articleService.delete(id);
+        return Result.success();
+    }
 }

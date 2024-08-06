@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.groups.Default;
 import lombok.Data;
 import org.hibernate.validator.constraints.URL;
 
@@ -28,6 +29,7 @@ public class Article implements Serializable {
      * ID
      */
     @TableId(value = "id", type = IdType.AUTO)
+    @NotNull(groups = {Update.class})
     private Integer id;
     /**
      * 文章标题
@@ -77,4 +79,6 @@ public class Article implements Serializable {
     @TableField(value = "update_time")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date updateTime;
+
+    public interface Update extends Default {}
 }
