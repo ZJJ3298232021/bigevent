@@ -1,0 +1,22 @@
+2024-08-30 00:17:27 [main] INFO  practice.zank.BigEventApplication - Starting BigEventApplication using Java 22.0.1 with PID 6304 (D:\Code\BigEvent\target\classes started by zank in D:\Code\BigEvent)
+2024-08-30 00:17:27 [main] INFO  practice.zank.BigEventApplication - The following 1 profile is active: "dev"
+2024-08-30 00:17:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-30 00:17:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-30 00:17:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-08-30 00:17:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-30 00:17:32 [main] INFO  o.a.c.core.AprLifecycleListener - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-08-30 00:17:32 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2024-08-30 00:17:32 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-30 00:17:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-30 00:17:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-30 00:17:32 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-30 00:17:32 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4622 ms
+2024-08-30 00:17:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-30 00:17:34 [main] INFO  practice.zank.BigEventApplication - Started BigEventApplication in 7.715 seconds (process running for 8.818)
+2024-08-30 00:18:03 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-30 00:18:03 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-30 00:18:03 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-30 00:18:16 [http-nio-8080-exec-3] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-08-30 00:21:15 [http-nio-8080-exec-4] ERROR p.z.exception.GlobalExceptionHandler - Required request body is missing: public practice.zank.entity.Result practice.zank.controller.CategoryController.add(practice.zank.entity.Category)
+2024-08-30 00:24:57 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-08-30 00:24:57 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -80,5 +80,8 @@ public class Article implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date updateTime;
 
+    @TableField(exist = false)
+    private String categoryName;
+
     public interface Update extends Default {}
 }

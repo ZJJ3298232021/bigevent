@@ -33,15 +33,7 @@ public class UserController {
 
     @PostMapping("login")
     public Result login(@Pattern(regexp = "^[a-zA-Z0-9_-]{6,16}$") String username, @Pattern(regexp = "^[a-zA-Z0-9_-]{6,16}$") String password) {
-        User user = userService.getUserByUsername(username);
-        if (user == null) {
-            return Result.error("用户名不存在");
-        }
-        if (!SecurityUtil.matches(password, user.getPassword())) {
-            return Result.error("密码错误");
-        } else {
-            return Result.success(JwtUtil.generateToken(user));
-        }
+        return userService.login(username, password);
     }
 
     @GetMapping("userInfo")

@@ -7,3 +7,24 @@ spring:
     url: jdbc:mysql://localhost:3306/big_event
     username: root
     password: 123456
+  data:
+    redis:
+      lettuce:
+        pool:
+          min-idle: 0
+          max-active: 8
+          max-idle: 8
+          max-wait: 300ms
+      host: 192.168.6.130
+      port: 6379
+      password: 200492
+      database: 0
+      timeout: 3000ms
+logging:
+  file:
+    name: ./logs/big_event_runtime.log
+  pattern:
+    # 控制台输出格式
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    # log文件输出格式
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

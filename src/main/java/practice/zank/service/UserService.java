@@ -1,5 +1,6 @@
 package practice.zank.service;
 
+import practice.zank.entity.Result;
 import practice.zank.entity.User;
 
 /**
@@ -17,4 +18,6 @@ public interface UserService {
     void updateAvatar(String avatar);
 
     void updatePwd(String oldPwd, String newPwd);
+
+    Result login(String username, String password);
 }
