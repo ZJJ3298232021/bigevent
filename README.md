@@ -12,3 +12,7 @@
 
 ### 附录
 [数据库文件(bigevent.sql)](./bigevent.sql)
+
+[在线访问](http://118.89.73.221)
+
+[博客](https://blog.webzank.site)
