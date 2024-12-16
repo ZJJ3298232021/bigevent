@@ -3,7 +3,7 @@ spring:
   main:
     banner-mode: off
   profiles:
-    active: dev
+    active: pro
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true

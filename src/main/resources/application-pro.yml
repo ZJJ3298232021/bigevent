@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/big_event
     username: root
-    password: 0a00d42f424b2406
+    password: ZtQfBMQkaFwBzWDG
   data:
     redis:
       lettuce:
@@ -19,6 +19,7 @@ spring:
       port: 6379
       database: 0
       timeout: 3000ms
+      password: 20040902zank
 logging:
   file:
     name: ./logs/big_event_runtime.log
